@@ -7,7 +7,7 @@ function solution($A) {
     // Implement your solution here
 
     if(empty($A)) {
-        return -1;
+        return 1;
     }
 
     //sum of  = 1 + 2 + 3 + ... + N + N+1
