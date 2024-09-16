@@ -5,25 +5,22 @@
 
 function solution($A) {
     // Implement your solution here
+    $totalSum = array_sum($A);
+    $leftSum = 0; 
+    $minDiff = PHP_INT_MAX; 
 
-    // if(empty($A)){
-    //     return 0;
-    // }
+    for ($i = 0; $i < count($A) - 1; $i++) {
+        $leftSum += $A[$i]; 
+        $rightSum = $totalSum - $leftSum; 
 
-    $count = count($A);
-    $minDiff = PHP_INT_MAX;
+        $currentDiff = abs($leftSum - $rightSum);
 
-    for($p = 1; $p<$count; $p++) {
-        $leftSum = array_sum(array_slice($A, 0, $p));
-        $rightSum = array_sum(array_slice($A,$p));
-        $diffAbs = abs($leftSum - $rightSum);
-
-        // minimal difference
-        $minDiff = min($minDiff,$diffAbs);
-
+        if ($currentDiff < $minDiff) {
+            $minDiff = $currentDiff;
+        }
     }
 
-    return $minDiff;
+    return $minDiff; 
 }
 
 ?>
