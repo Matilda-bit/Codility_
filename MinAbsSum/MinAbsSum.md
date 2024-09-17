@@ -32,3 +32,22 @@ Write an efficient algorithm for the following assumptions:
 
 N is an integer within the range [0..20,000];
 each element of array A is an integer within the range [−100..100].
+
+
+===================================================================
+
+A = [1,5,2,-2]
+N = count(A) = 4
+S = [-1,1,-1,1]
+val(A,S) = abs(sum(A[i] * S[i] for 0<i<N ))
+
+iterations:
+0: 1 * -1 = -1
+1: 5 * 1 = 5
+2: 2 * -1 = -2
+3: -2 * 1 = -2
+
+sum = -1 + 5 + (-2) + (-2) = -5 + 5 = 0
+abs(0) = 0
+
+return 0;
