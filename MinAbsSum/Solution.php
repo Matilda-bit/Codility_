@@ -6,6 +6,7 @@
 function solution($A) {
     // Implement your solution here
 
+    //72%
     // Calculate the total sum and limit the calculation to non-negative values
     $totalSum = array_sum(array_map('abs', $A));
     $halfSum = intval($totalSum / 2);
